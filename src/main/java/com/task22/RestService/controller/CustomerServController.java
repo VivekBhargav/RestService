@@ -46,7 +46,7 @@ public class CustomerServController {
 		return status;
 	}
 
-	@RequestMapping(value = "/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody ResponseEntity<?> getCustomers() {
 		List<Customer> customers = custServ.getCustomers();
 		return new ResponseEntity<>(customers, HttpStatus.OK);
